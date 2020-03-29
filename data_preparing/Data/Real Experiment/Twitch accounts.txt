@@ -1,0 +1,46 @@
+Username: sasukeakasi
+Password: Ukiyo-eGWAP
+
+Username: narutoasaki
+Password: Ukiyo-eGWAP
+
+Username: kakashimaska
+Password: Ukiyo-eGWAP
+
+Username: ichimarumaska
+Password: Ukiyo-eGWAP
+
+Username: hatakeitachiasu
+Password: Ukiyo-eGWAP
+
+Username: hatakeitachiasu1
+Password: Ukiyo-eGWAP
+
+Username: sasukeakasi1
+Password: Ukiyo-eGWAP
+
+
+
+
+
+user5@ice.ci.ritsumei.ac.jp
+
+
+You can send special commands below via chat for shooting control:
+1. !M or !m	to increase the force by +1 
+2. !L or !l	        to decrease the force by -1 
+3. !U or !u	to increase the angle by +1 
+4. !D or !d	to decrease the angle by -1 
+
+In addition, for level generation, the chat message that is most humorous becomes the next level. 
+
+For more details, please read the paper below:
+Yuxuan Jiang, Pujana Paliyawan, Ruck Thawonmas, and Tomohiro Harada,  "An Audience Participation Angry Birds Platform for Social Well-Being," Proc. of the 19th International Conference on Intelligent Games and Simulation (GAME-ON'2018), Dundee, UK, pp. 116-120, Sep. 18-20, 2018.
+
+[PDF file] http://www.ice.ci.ritsumei.ac.jp/~ruck/PAP/gameon18-jiang.pdf
+
+Ukiyo images are from Ritsumeikan ARC Ukiyo-e Portal Database:
+http://www.dh-jac.net/db/nishikie-e/search_portal.php
+
+This streaming is provided to you by Intelligent Computer Entertainment Laboratory, College of Information Science and Engineering, Ritsumeikan University
+http://www.ice.ci.ritsumei.ac.jp/

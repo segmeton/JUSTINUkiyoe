@@ -1,0 +1,7 @@
+A woman is riding a swan and flying||0.1333333333333333||2
+woman is holding baby.||0.17058823529411765||2
+a young man and a young woman||0.23333333333333334||2
+woman with her child||0.021568627450980427||4
+night at a sea with some broken contruction||-0.05454545454545451||2
+a woman ride on a bird||0.1666666666666667||3
+a woman and her child||0.29166666666666663||2

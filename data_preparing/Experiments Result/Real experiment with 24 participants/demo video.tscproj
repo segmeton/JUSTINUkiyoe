@@ -1,0 +1,720 @@
+{
+  "title" : "",
+  "description" : "",
+  "author" : "",
+  "targetLoudness" : -18.0,
+  "shouldApplyLoudnessNormalization" : true,
+  "videoFormatFrameRate" : 30,
+  "audioFormatSampleRate" : 44100,
+  "width" : 1552.0,
+  "height" : 968.0,
+  "version" : "3.0",
+  "editRate" : 30,
+  "authoringClientName" :  {
+    "name" : "Camtasia",
+    "platform" : "Windows",
+    "version" : "19.0"
+  },
+  "sourceBin" : [
+    {
+      "id" : 1,
+      "src" : "C:\\Users\\Justin\\Documents\\Camtasia\\Rec 01-07-20_001.trec",
+      "rect" : [0, 0, 1552, 968],
+      "lastMod" : "20200107T071329",
+      "sourceTracks" : [
+        {
+          "range" : [0, 34570],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1552, 968],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : "2b7b6a00-7a1f-11e2-83d0-0017f200be7f;2b7b6aef-7a1f-11e2-83d0-0017f200be7f;2b7b6af0-7a1f-11e2-83d0-0017f200be7f;2b7b6af1-7a1f-11e2-83d0-0017f200be7f;2b7b6af2-7a1f-11e2-83d0-0017f200be7f;2b7b6af3-7a1f-11e2-83d0-0017f200be7f;2b7b6af5-7a1f-11e2-83d0-0017f200be7f;2b7b6af6-7a1f-11e2-83d0-0017f200be7f;2b7b6af7-7a1f-11e2-83d0-0017f200be7f;2b7b6af8-7a1f-11e2-83d0-0017f200be7f;2b7b6af9-7a1f-11e2-83d0-0017f200be7f;2b7b6afa-7a1f-11e2-83d0-0017f200be7f;"
+        },
+        {
+          "range" : [0, 50822144],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -11.5563396439091,
+          "peakLevel" : 0.84478759765625,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20200107T071344.869526"
+      }
+    },
+    {
+      "id" : 2,
+      "src" : "C:\\Users\\Justin\\Documents\\Graduate Study\\Lab Research\\Angry Ice\\AngryICEWithDuluthTwitchV19\\AngryICEProject\\Gwap\\Data\\BGM\\sukiyaki_instrumental_cover.mp3",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20200127T132417",
+      "sourceTracks" : [
+        {
+          "range" : [0, 2493125625],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 0,
+          "numChannels" : 2,
+          "integratedLUFS" : -18.820093550933,
+          "peakLevel" : 0.719837009906769,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "timeAdded" : "20200214T065941.134696"
+      }
+    }
+  ],
+  "timeline" : {
+    "id" : 3,
+    "sceneTrack" : {
+      "scenes" : [
+        {
+          "duration" : 79.0333333333333,
+          "title" : "",
+          "type" : "",
+          "csml" : {
+            "tracks" : [
+              {
+                "trackIndex" : 0,
+                "medias" : [
+                  {
+                    "id" : 4,
+                    "_type" : "StitchedMedia",
+                    "minMediaStart" : 0,
+                    "attributes" : {
+                      "ident" : "Rec 01-07-20_001",
+                      "gain" : 1.0,
+                      "mixToMono" : false
+                    },
+                    "parameters" : {
+                      "volume" : 1.0,
+                      "cursorOpacity" : 1.0,
+                      "cursorScale" : 1.0
+                    },
+                    "medias" : [
+                        {
+                          "id" : 5,
+                          "_type" : "UnifiedMedia",
+                          "video" : 
+                              {
+                                "id" : 6,
+                                "_type" : "ScreenVMFile",
+                                "src" : 1,
+                                "trackNumber" : 0,
+                                "attributes" : {
+                                  "ident" : "Rec 01-07-20_001"
+                                },
+                                "parameters" : {
+                                  "cursorScale" : {
+                                    "type" : "double",
+                                    "defaultValue" : 0.0,
+                                    "interp" : "linr"
+                                  },
+                                  "cursorOpacity" : {
+                                    "type" : "double",
+                                    "defaultValue" : 0.0,
+                                    "interp" : "linr"
+                                  }
+                                },
+                                "effects" : [
+
+                                ],
+                                "start" : 0,
+                                "duration" : 24994,
+                                "mediaStart" : 0,
+                                "mediaDuration" : 24994,
+                                "scalar" : 1,
+                                "animationTracks" : {
+
+                                }
+                              },
+                          "audio" : 
+                              {
+                                "id" : 7,
+                                "_type" : "AMFile",
+                                "src" : 1,
+                                "trackNumber" : 1,
+                                "attributes" : {
+                                  "ident" : "",
+                                  "gain" : 1.0,
+                                  "mixToMono" : false
+                                },
+                                  "channelNumber" : "0,1",
+                                "effects" : [
+
+                                ],
+                                "start" : 0,
+                                "duration" : 24994,
+                                "mediaStart" : 0,
+                                "mediaDuration" : 24994,
+                                "scalar" : 1,
+                                "animationTracks" : {
+
+                                }
+                              }
+,
+                          "start" : 0,
+                          "duration" : 24994,
+                          "mediaStart" : 0,
+                          "mediaDuration" : 34570,
+                          "scalar" : 1,
+                          "metadata" : {
+                            "AutoAppliedSmartFocus" : "False",
+                            "clipSpeedAttribute" : false
+                          }
+                        },
+                        {
+                          "id" : 8,
+                          "_type" : "UnifiedMedia",
+                          "video" : 
+                              {
+                                "id" : 9,
+                                "_type" : "ScreenVMFile",
+                                "src" : 1,
+                                "trackNumber" : 0,
+                                "attributes" : {
+                                  "ident" : "Rec 01-07-20_001"
+                                },
+                                "parameters" : {
+                                  "cursorScale" : {
+                                    "type" : "double",
+                                    "defaultValue" : 0.0,
+                                    "interp" : "linr"
+                                  },
+                                  "cursorOpacity" : {
+                                    "type" : "double",
+                                    "defaultValue" : 0.0,
+                                    "interp" : "linr"
+                                  }
+                                },
+                                "effects" : [
+
+                                ],
+                                "start" : 24994,
+                                "duration" : 1,
+                                "mediaStart" : 26161,
+                                "mediaDuration" : 1,
+                                "scalar" : 1,
+                                "animationTracks" : {
+
+                                }
+                              },
+                          "audio" : 
+                              {
+                                "id" : 10,
+                                "_type" : "AMFile",
+                                "src" : 1,
+                                "trackNumber" : 1,
+                                "attributes" : {
+                                  "ident" : "",
+                                  "gain" : 1.0,
+                                  "mixToMono" : false
+                                },
+                                  "channelNumber" : "0,1",
+                                "effects" : [
+
+                                ],
+                                "start" : 24994,
+                                "duration" : 1,
+                                "mediaStart" : 26161,
+                                "mediaDuration" : 1,
+                                "scalar" : 1,
+                                "animationTracks" : {
+
+                                }
+                              }
+,
+                          "start" : 24994,
+                          "duration" : 1,
+                          "mediaStart" : 0,
+                          "mediaDuration" : 34570,
+                          "scalar" : 1,
+                          "metadata" : {
+                            "AutoAppliedSmartFocus" : "False",
+                            "clipSpeedAttribute" : false
+                          }
+                        },
+                        {
+                          "id" : 11,
+                          "_type" : "UnifiedMedia",
+                          "video" : 
+                              {
+                                "id" : 12,
+                                "_type" : "ScreenVMFile",
+                                "src" : 1,
+                                "trackNumber" : 0,
+                                "attributes" : {
+                                  "ident" : "Rec 01-07-20_001"
+                                },
+                                "parameters" : {
+                                  "cursorScale" : {
+                                    "type" : "double",
+                                    "defaultValue" : 0.0,
+                                    "interp" : "linr"
+                                  },
+                                  "cursorOpacity" : {
+                                    "type" : "double",
+                                    "defaultValue" : 0.0,
+                                    "interp" : "linr"
+                                  }
+                                },
+                                "effects" : [
+
+                                ],
+                                "start" : 24995,
+                                "duration" : 8153,
+                                "mediaStart" : 26417,
+                                "mediaDuration" : 8153,
+                                "scalar" : 1,
+                                "animationTracks" : {
+
+                                }
+                              },
+                          "audio" : 
+                              {
+                                "id" : 13,
+                                "_type" : "AMFile",
+                                "src" : 1,
+                                "trackNumber" : 1,
+                                "attributes" : {
+                                  "ident" : "",
+                                  "gain" : 1.0,
+                                  "mixToMono" : false
+                                },
+                                  "channelNumber" : "0,1",
+                                "effects" : [
+
+                                ],
+                                "start" : 24995,
+                                "duration" : 8153,
+                                "mediaStart" : 26417,
+                                "mediaDuration" : 8153,
+                                "scalar" : 1,
+                                "animationTracks" : {
+
+                                }
+                              }
+,
+                          "start" : 24995,
+                          "duration" : 8153,
+                          "mediaStart" : 0,
+                          "mediaDuration" : 34570,
+                          "scalar" : 1,
+                          "metadata" : {
+                            "AutoAppliedSmartFocus" : "False",
+                            "clipSpeedAttribute" : false
+                          }
+                        }
+                    ],
+                    "effects" : [
+
+                    ],
+                    "start" : 6,
+                    "duration" : 2160,
+                    "mediaStart" : 24084,
+                    "mediaDuration" : 2160,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "AutoAppliedSmartFocus" : "False",
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 1,
+                "medias" : [
+                  {
+                    "id" : 14,
+                    "_type" : "Caption",
+                    "allowTrimOut" : 1,
+                    "maxMediaDuration" : 9.22337e+18,
+                    "parameters" : {
+                      "captionData" : {
+                        "type" : "caption",
+                        "keyframes" : [
+                          {
+                            "endTime" : -9999999,
+                            "time" : -9999999,
+                            "value" : { "text" : "The game has infinite rounds. ", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 47,
+                            "time" : 47,
+                            "value" : { "text" : "Each round has 2 sessions: Describing and Voting. You can choose to be a describer or a voter.", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 173,
+                            "time" : 173,
+                            "value" : { "text" : "This session is for describing. If you choose to be a voter for this round, you don't need to do anything in this session.", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 314,
+                            "time" : 314,
+                            "value" : { "text" : "Otherwise, you can describe up to 3 images in 80s. Follow the instructions on the screen.", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 437,
+                            "time" : 437,
+                            "value" : { "text" : "For example, If I want to describe image A, I can type like this: ", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 522,
+                            "time" : 522,
+                            "value" : { "text" : "A:A woman in kimono is holding a baby and the baby is holding a snake toy. ", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 663,
+                            "time" : 663,
+                            "value" : { "text" : "After describing this image, you can describe other images if you like.", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 814,
+                            "time" : 814,
+                            "value" : { "text" : "Being a describer has more chance to win more score!", "textAttributes" : null },
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 0,
+                    "duration" : 939,
+                    "mediaStart" : -22,
+                    "mediaDuration" : 939,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 2,
+                "medias" : [
+                  {
+                    "id" : 15,
+                    "_type" : "Caption",
+                    "allowTrimOut" : 1,
+                    "maxMediaDuration" : 9.22337e+18,
+                    "parameters" : {
+                      "captionData" : {
+                        "type" : "caption",
+                        "keyframes" : [
+                          {
+                            "endTime" : -9999999,
+                            "time" : -9999999,
+                            "value" : { "text" : "After 80s, the game turns to the voting session. You can vote for the best description which suits the corresponding image.", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 148,
+                            "time" : 148,
+                            "value" : { "text" : "You can only vote for 1 description in this session, following the instruction on the screen.", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 280,
+                            "time" : 280,
+                            "value" : { "text" : "For example, if I want to vote for description “14:A woman holding her baby.” I just type #14. Simple, right? :3", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 421,
+                            "time" : 421,
+                            "value" : { "text" : "If you describe an image in the describing session, you cannot vote in this session of the same round.", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 560,
+                            "time" : 560,
+                            "value" : { "text" : "The voting session will end after 30 seconds.", "textAttributes" : null },
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 967,
+                    "duration" : 686,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 686,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 16,
+                    "_type" : "Caption",
+                    "allowTrimOut" : 1,
+                    "maxMediaDuration" : 9.22337e+18,
+                    "parameters" : {
+                      "captionData" : {
+                        "type" : "caption",
+                        "keyframes" : [
+                          {
+                            "endTime" : -9999999,
+                            "time" : -9999999,
+                            "value" : { "text" : "After voting, the description with the highest number of votes for each image will win. People who created or voted for that ", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 96,
+                            "time" : 96,
+                            "value" : { "text" : "description will be given a score.", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 167,
+                            "time" : 167,
+                            "value" : { "text" : "Players can have minus score according to a penalty mechanism ", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 259,
+                            "time" : 259,
+                            "value" : { "text" : "when winning descriptions that they created or voted previously do not win in the current round.", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 410,
+                            "time" : 410,
+                            "value" : { "text" : "So try your best. :D. If you cheat to win, you will lose later.", "textAttributes" : null },
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 517,
+                            "time" : 517,
+                            "value" : { "text" : "Have fun with the game. Love.", "textAttributes" : null },
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 1721,
+                    "duration" : 650,
+                    "mediaStart" : -45,
+                    "mediaDuration" : 650,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 3,
+                "medias" : [
+                  {
+                    "id" : 17,
+                    "_type" : "AMFile",
+                    "src" : 2,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "sukiyaki_instrumental_cover",
+                      "gain" : 1.0,
+                      "mixToMono" : false
+                    },
+                      "channelNumber" : "0,1",
+                    "parameters" : {
+                      "volume" : {
+                        "type" : "double",
+                        "keyframes" : [
+                          {
+                            "endTime" : 0,
+                            "time" : 0,
+                            "value" : 1.0,
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 3314,
+                            "time" : 3314,
+                            "value" : 1.0,
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 3383,
+                            "time" : 3383,
+                            "value" : 0.483025104976324,
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 3425,
+                            "time" : 3425,
+                            "value" : 0.313186813186814,
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 0,
+                    "duration" : 2371,
+                    "mediaStart" : 1143,
+                    "mediaDuration" : 2371,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 4,
+                "medias" : [
+                ]
+              },
+              {
+                "trackIndex" : 5,
+                "medias" : [
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "trackAttributes" : [
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "matte" : 0,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      }
+    ],
+    "captionAttributes" : {
+      "enabled" : true,
+      "fontName" : "Arial",
+      "fontSize" : 57,
+      "backgroundColor" : [ 0, 0, 0, 191],
+      "foregroundColor" : [ 255, 255, 255, 255],
+      "lang" : "en",
+      "alignment" : 2,
+      "defaultFontSize" : true,
+      "opacity" : 0.5,
+      "backgroundEnabled" : true,
+      "backgroundOnlyAroundText" : true
+    },
+    "backgroundColor" : [ 0, 0, 0, 255]
+  },
+  "metadata" : {
+    "AutoSaveFile" : "",
+    "CanvasZoom" : 57,
+    "Date" : "2020-01-07 04:13:43 PM",
+    "IsAutoSave" : "0",
+    "Language" : "ENU",
+    "ProfileName" : "MP4 with Smart Player (up to 1080p)",
+    "ProjectDimensionsChanged" : "1",
+    "Title" : "demo video",
+    "audioNarrationNotes" : "",
+    "calloutStyle" : "Basic",
+    "canvasDetached" : "False",
+    "canvasPositionHeight" : "0",
+    "canvasPositionLeft" : "0",
+    "canvasPositionTop" : "0",
+    "canvasPositionWidth" : "0"
+  }
+}

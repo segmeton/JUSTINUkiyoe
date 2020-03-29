@@ -1,0 +1,4 @@
+__pycache__
+.idea
+data_preparing/.ipynb_checkpoints
+data_preparing/Data/stage 3/pretrained_doc2vec/
