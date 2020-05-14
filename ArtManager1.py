@@ -32,7 +32,7 @@ class ArtManager1:
             anchor='w', bg='white')
         self.Remind.grid(row=1, column=0, columnspan=5)
 
-        self.Bottom = Frame(self.window, width=1680, height=150, bg="white", relief="raise")
+        self.Bottom = Frame(self.window, width=1600, height=150, bg="white", relief="raise")
         self.Bottom.pack(side=BOTTOM, padx=10, pady=10)
 
         # self.Right = Frame(self.window, width=250, height=750, bg="white", relief="raise")

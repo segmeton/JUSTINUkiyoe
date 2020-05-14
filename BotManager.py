@@ -20,7 +20,7 @@ class BotNotifier:
         self.botTwitch.giving_stop_voting_signal() # stop voting at the beginning   
         
         self.label = Label(self.artManager.Bottom, text=text, bg="white", fg="black", 
-                            font="arial 25 bold", wraplength=1660)
+                            font="arial 25 bold", wraplength=1600)
         self.label.grid(row=0, column=0, padx=10, pady=10, sticky=W)
 
         top_score_text = self.set_top_score_text()
@@ -197,7 +197,10 @@ class BotNotifier:
         
         participant_results = self.botTwitch.get_audiences().get_participants_results(images, game_session, descriptions)
 
-        for u, value in participant_results.items():
+        if participant_results:
+            text = text + "\nScore awarded to players:\n\n"
+
+        for u, value in sorted(participant_results.items()):
             
             game_session_value = value.get(game_session)
 
