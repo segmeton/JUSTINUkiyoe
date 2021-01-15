@@ -2,10 +2,14 @@ from tkinter import *
 import tkinter as tk
 import Utils
 import json
+import sys
 
 import pygame
 
 class BotNotifier:
+
+    volume = 0.1
+
     def __init__(self, artManager, botTwitch):
         
 
@@ -44,6 +48,7 @@ class BotNotifier:
         # play music
         pygame.init()
         pygame.mixer.music.load("Data/BGM/sukiyaki_instrumental_describing.mp3")
+        pygame.mixer.music.set_volume(self.volume)
         pygame.mixer.music.play()
 
     def check_at_least_has_one_description(self):
@@ -70,7 +75,8 @@ class BotNotifier:
             self.twinkle_signal = 0
         
         self.label.after(1000, self.create_notification_label)
-    
+
+    # set time
     def update_label(self):
         time = 90000
         if self.session == 0:
@@ -96,8 +102,11 @@ class BotNotifier:
         self.label.configure(fg="black")
 
     def change_label_text(self):
+
+        #change music
         pygame.mixer.music.unload()
         pygame.mixer.music.load("Data/BGM/sukiyaki_instrumental_voting.mp3")
+        pygame.mixer.music.set_volume(self.volume)
         pygame.mixer.music.play()
 
         self.botTwitch.giving_stop_describing_signal()
@@ -153,9 +162,13 @@ class BotNotifier:
         
 
     def revert_label_text(self):
+
+        # change music
         pygame.mixer.music.unload()
         pygame.mixer.music.load("Data/BGM/sukiyaki_instrumental_describing.mp3")
+        pygame.mixer.music.set_volume(self.volume)
         pygame.mixer.music.play()
+
         self.botTwitch.setGameSession() # increase game session to next round
         self.artManager.Title.configure(text="Describing session                                 ")
         self.artManager.Remind.configure(text="Feel free to describe as many images below as you want                        ")

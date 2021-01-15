@@ -2,19 +2,26 @@ import socket, time, datetime, re, json
 
 import Utils, Audiences
 
+import SocketConnector
+
 class BotTwitch:
 
-    
+    socketConnector = None
+    is_using_tts = True
 
     def __init__(self, artManager):
         ### Options (Don't edit)
         self.SERVER = "irc.twitch.tv"  # server
         self.PORT = 6667 # port
         ### Options (Edit this)
-        self.PASS = "oauth:kykwow2afwwea6yvu92d6qoebt44c3"  # bot password can be found on https://twitchapps.com/tmi/
+        # self.PASS = "oauth:kykwow2afwwea6yvu92d6qoebt44c3"  # bot password can be found on https://twitchapps.com/tmi/
+        # oauth:vsev4928vqu449rr6xwcp1nifwtttu
+        self.PASS = "oauth:vsev4928vqu449rr6xwcp1nifwtttu"
         self.BOT = "botch932"  # Bot's name [NO CAPITALS]
-        self.CHANNEL = "ch932"  # Channal name [NO CAPITALS]
-        self.OWNER = "ch932"  # Owner's name [NO CAPITALS]
+        # self.CHANNEL = "ch932"  # Channal name [NO CAPITALS]
+        # self.OWNER = "ch932"  # Owner's name [NO CAPITALS]
+        self.CHANNEL = "segmeton"  # Channal name [NO CAPITALS]
+        self.OWNER = "justin"  # Owner's name [NO CAPITALS]
         self.utils = Utils.Utils()
 
         self.pattern = re.compile("^[a-zA-Z0-9 ?.!-/:;]*$")
@@ -37,6 +44,9 @@ class BotTwitch:
 
         self.joinchat()
         self.readbuffer = ""
+
+        if self.is_using_tts:
+            self.socketConnector = SocketConnector.SocketConnector()
     
     def get_audiences(self):
         return self.audiences
@@ -85,11 +95,17 @@ class BotTwitch:
         self.isStopDescribingSignal = True
         self.isStopVotingSignal = False
 
+        if self.is_using_tts:
+            self.socketConnector.send("clear", "command")
+
     def giving_stop_voting_signal(self):
         print("Stop voting now")
         # self.sendMessage(message)
         self.isStopVotingSignal = True
         self.isStopDescribingSignal = False
+
+        if self.is_using_tts:
+            self.socketConnector.send("clear", "command")
 
     def Console(self, line):
         # gets if it is a user or twitch server
@@ -126,6 +142,11 @@ class BotTwitch:
             if value[0] == img_id:
                 count += 1
         return count
+
+    def saveDescription(self, line):
+        f = open("D:/Project/texttospeech1/textfile/testComments.txt", "a")
+        f.write(line)
+        f.close()
     
     def MainBotProcess(self, artManager):
         while True:
@@ -206,6 +227,12 @@ class BotTwitch:
 
                                         self.utils.writeVoteAndTagsData(user, message, images, self.game_session)
 
+                                        self.saveDescription(description)
+
+                                        # send image description
+                                        if self.is_using_tts:
+                                            self.socketConnector.send(description, "message")
+
                                         # print("descriptions in botTwitch " + json.dumps(self.audiences.get_descriptions()))
                                     else:
                                         self.sendMessage("This description is already existed for image " + img_id + \
@@ -250,6 +277,11 @@ class BotTwitch:
                                             users.append(user)
                                             # print("images in BotTwitch " + json.dumps(artManager.get_images()))
                                             self.utils.writeVoteData(user, img_id, description, artManager.get_images(), self.game_session)
+
+                                            #send voted description
+                                            if self.is_using_tts:
+                                                self.socketConnector.send(description, "message")
+
                                         else:
                                             self.sendMessage("You already voted for this description.")
                                         
@@ -261,6 +293,11 @@ class BotTwitch:
                                         if user not in total_users:
                                             users.append(user)
                                             self.utils.writeVoteData(user, img_id, description, artManager.get_images(), self.game_session)
+
+                                            # send voted description
+                                            if self.is_using_tts:
+                                                self.socketConnector.send(description, "message")
+
                                         else:
                                             self.sendMessage("You cannot vote for more than one description.")
                                     
