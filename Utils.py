@@ -9,10 +9,11 @@ class Utils:
     
     def retrieveImages(self):
         # df = pd.read_csv('data_preparing/Data/cleaned-ukiyo-e-content-remove-nan-keyword-filtered.csv')
-        df = pd.read_csv('data_preparing/Data/cleaned-ukiyo-e-content-remove-nan-keyword-filtered.csv')
+        # df = pd.read_csv('data_preparing/Data/cleaned-ukiyo-e-content-remove-nan-keyword-filtered.csv')
+        df = pd.read_csv('Data/best_description_for_each_image_v2.csv')
         qualified_images = self.load_qualified_images()
         df = df[df.Source.apply(lambda url: os.path.basename(url) not in qualified_images)]
-        df = df[~df['Keywords'].str.contains("sex")]
+        # df = df[~df['Keywords'].str.contains("sex")]
         
         n = 3
         if len(df) < 3:
@@ -135,7 +136,14 @@ class Utils:
         return (old_participants, des_id, descriptions, used_images)
 
     def get_img_descriptions_by_pythia(self, images):
-        df = pd.read_csv("data_preparing/Data/Pythia/uki-captions-pythia.csv")
+
+        # default data set
+        # df = pd.read_csv("data_preparing/Data/Pythia/uki-captions-pythia.csv")
+
+        # custom data set
+        df = pd.read_csv("Data/uki-captions-pythia_v2.csv")
+
+
         descriptions = {}
 
         des_id = 1

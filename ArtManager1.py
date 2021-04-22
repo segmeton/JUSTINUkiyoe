@@ -74,8 +74,13 @@ class ArtManager1:
             T = Label(self.Center, font=('arial', 20, 'bold'), text=img_id, bg="white", anchor="w")
             T.grid(row=0,column=i)
             
-            img = ImageTk.PhotoImage(self.resize_image(Image.open("data_preparing/Data/images/" + \
-                image_name), height, width))
+            # default data set
+            # img = ImageTk.PhotoImage(self.resize_image(Image.open("data_preparing/Data/images/" + image_name), height, width))
+
+            # custom data set
+            img = ImageTk.PhotoImage(self.resize_image(Image.open("Data/images/group1/" + image_name), height, width))
+
+
             pannel = Label(self.Center, image = img, height=height, width=width, bg="white", padx=0)
             pannel.grid(row=1, column=i)
             pannel.image = img

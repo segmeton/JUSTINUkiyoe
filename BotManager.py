@@ -9,6 +9,7 @@ import pygame
 class BotNotifier:
 
     volume = 0.1
+    is_use_music = False
 
     def __init__(self, artManager, botTwitch):
         
@@ -47,9 +48,10 @@ class BotNotifier:
 
         # play music
         pygame.init()
-        pygame.mixer.music.load("Data/BGM/sukiyaki_instrumental_describing.mp3")
-        pygame.mixer.music.set_volume(self.volume)
-        pygame.mixer.music.play()
+        if self.is_use_music:
+            pygame.mixer.music.load("Data/BGM/sukiyaki_instrumental_describing.mp3")
+            pygame.mixer.music.set_volume(self.volume)
+            pygame.mixer.music.play()
 
     def check_at_least_has_one_description(self):
         while True:
@@ -78,16 +80,19 @@ class BotNotifier:
 
     # set time
     def update_label(self):
-        time = 90000
+        # time = 90000 # describing session
+        time = 80000
         if self.session == 0:
             self.label.after(time, self.change_label_text)
             self.session = 1
         elif self.session == 1:
-            time = 35000
+            # time = 35000 # voting session
+            time = 30000
             self.label.after(time, self.showing_winner)
             self.session = 2
         else:
-            time = 15000
+            # time = 15000 # result
+            time = 10000
             self.label.after(time, self.revert_label_text)
             self.session = 0
         self.label.after(time, self.update_label)
@@ -104,10 +109,11 @@ class BotNotifier:
     def change_label_text(self):
 
         #change music
-        pygame.mixer.music.unload()
-        pygame.mixer.music.load("Data/BGM/sukiyaki_instrumental_voting.mp3")
-        pygame.mixer.music.set_volume(self.volume)
-        pygame.mixer.music.play()
+        if self.is_use_music:
+            pygame.mixer.music.unload()
+            pygame.mixer.music.load("Data/BGM/sukiyaki_instrumental_voting.mp3")
+            pygame.mixer.music.set_volume(self.volume)
+            pygame.mixer.music.play()
 
         self.botTwitch.giving_stop_describing_signal()
         self.artManager.Title.configure(text="Voting session                                 ")
@@ -164,10 +170,14 @@ class BotNotifier:
     def revert_label_text(self):
 
         # change music
-        pygame.mixer.music.unload()
-        pygame.mixer.music.load("Data/BGM/sukiyaki_instrumental_describing.mp3")
-        pygame.mixer.music.set_volume(self.volume)
-        pygame.mixer.music.play()
+        if self.is_use_music:
+            pygame.mixer.music.unload()
+            pygame.mixer.music.load("Data/BGM/sukiyaki_instrumental_describing.mp3")
+            pygame.mixer.music.set_volume(self.volume)
+            pygame.mixer.music.play()
+
+        if self.botTwitch.is_using_tts and self.botTwitch.is_tts_result:
+            self.botTwitch.socketConnector.send("clear", "command")
 
         self.botTwitch.setGameSession() # increase game session to next round
         self.artManager.Title.configure(text="Describing session                                 ")
@@ -198,12 +208,17 @@ class BotNotifier:
         text = "Winning descriptions for this round are:\n"
         descriptions = self.botTwitch.get_audiences().get_descriptions()
         images = self.artManager.get_images()
-        
+
+        # rap_text = "I wanna be the ever best that no one ever was"
+        rap_text = ""
+
         for img_id in images:
             des_id = self.botTwitch.get_audiences().get_winning_des_id_foreach_img(img_id)
             if des_id is not None:
                 description = descriptions.get(des_id)[1]
-                text = text + "   " + des_id + ": " + description + " for image " + img_id + "\n"
+                winning_rap = "For image " + des_id + " is  " + description
+                text = text + "   " + img_id + ": " + description + " for image " + img_id + "\n"
+                rap_text = rap_text + winning_rap + "\n"
             else:
                 text = text + "    None for image " + img_id + "\n"
         
@@ -227,6 +242,9 @@ class BotNotifier:
                     message = "      User " + u + " get score " + str(int(round(added_score*10)))
                 text = text + message
 
+        if rap_text != "" and self.botTwitch.is_using_tts and self.botTwitch.is_tts_result:
+            self.botTwitch.socketConnector.send(rap_text, "message")
+
         self.label.configure(text=text)
         self.utils.store_participants_info(participant_results)
         self.utils.store_winning_des(self.botTwitch.get_audiences().get_win_des())
@@ -239,4 +257,6 @@ class BotNotifier:
 
         top_score_text = self.set_top_score_text()
         self.top_score_label.configure(text=top_score_text)
-        self.botTwitch.sendMessage('you can see full list of ranking scores here: https://drive.google.com/file/d/1WY3xdfaJbWxlQoJkjhrq04SdCApIiXT4/view')
+
+        # showing full list of ranking
+        # self.botTwitch.sendMessage('you can see full list of ranking scores here: https://drive.google.com/file/d/1WY3xdfaJbWxlQoJkjhrq04SdCApIiXT4/view')

@@ -8,6 +8,10 @@ class BotTwitch:
 
     socketConnector = None
     is_using_tts = True
+    is_tts_describing = False
+    is_tts_voting = False
+
+    is_tts_result = True
 
     def __init__(self, artManager):
         ### Options (Don't edit)
@@ -96,7 +100,7 @@ class BotTwitch:
         self.isStopDescribingSignal = True
         self.isStopVotingSignal = False
 
-        if self.is_using_tts:
+        if self.is_using_tts and self.is_tts_describing:
             self.socketConnector.send("clear", "command")
 
     def giving_stop_voting_signal(self):
@@ -105,7 +109,7 @@ class BotTwitch:
         self.isStopVotingSignal = True
         self.isStopDescribingSignal = False
 
-        if self.is_using_tts:
+        if self.is_using_tts and self.is_tts_voting:
             self.socketConnector.send("clear", "command")
 
     def Console(self, line):
@@ -223,7 +227,7 @@ class BotTwitch:
                                         self.utils.writeVoteAndTagsData(user, message, images, self.game_session)
 
                                         # send image description
-                                        if self.is_using_tts:
+                                        if self.is_using_tts and self.is_tts_desccribing:
                                             self.socketConnector.send(description, "message")
 
                                         # print("descriptions in botTwitch " + json.dumps(self.audiences.get_descriptions()))
@@ -278,7 +282,7 @@ class BotTwitch:
                                                                      self.game_session)
 
                                             # send voted description
-                                            if self.is_using_tts:
+                                            if self.is_using_tts and self.is_tts_voting:
                                                 self.socketConnector.send(description, "message")
 
                                         else:
@@ -295,7 +299,7 @@ class BotTwitch:
                                                                      self.game_session)
 
                                             # send voted description
-                                            if self.is_using_tts:
+                                            if self.is_using_tts and self.is_tts_voting:
                                                 self.socketConnector.send(description, "message")
 
                                         else:
